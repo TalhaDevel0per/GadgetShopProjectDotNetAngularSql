@@ -1,0 +1,116 @@
+<div class="mx-3 my-3">
+    <h1>Inventory</h1>
+</div>
+<div class="row mx-3">
+    <form action="" class="row gx-3 gy-2 align-items-center" (ngSubmit)="onSubmit()" novalidate>
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="">Product Id</label>
+            </div>
+            <div class="col-sm-3">
+                <label for="">Product Name</label>
+            </div>
+            <div class="col-sm-3">
+                <label for="">Quantity Available</label>
+            </div>
+            <div class="col-sm-3">
+                <label for="">Re-order Point</label>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <label for="ProductId" class="visually-hidden">Product Id</label>
+            <input type="text" id="ProductId" placeholder="1001" class="form-control" [disabled]="disabledProductIdInput"
+                [(ngModel)]="inventoryData.productId" name="productId">
+        </div>
+        <div class="col-sm-3">
+            <label for="ProductName" class="visually-hidden">Product Name</label>
+            <select id="ProductName" class="form-select"  [(ngModel)]="inventoryData.productName" name="productName">
+                <option disabled selected>Choose...</option>
+                <option value="EarPhone">EarPhone</option>
+                <option value="Mobile">tabletss</option>
+                <option value="Play Station">Play Station</option>
+                <option value="Laptops">Laptops</option>
+                <option value="Furniture">Furniture</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <label for="AvailableQty" class="visually-hidden">Quantity Available</label>
+            <input type="text" id="AvailableQty" placeholder="0" class="form-control"
+                [(ngModel)]="inventoryData.availableQty" name="availableQty">
+        </div>
+        <div class="col-sm-3">
+            <label for="ReOrderPoint" class="visually-hidden">Reorder Point</label>
+            <input type="text" id="ReOrderPoint" placeholder="0" class="form-control"
+                [(ngModel)]="inventoryData.reOrderPoint" name="reOrderPoint">
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>
+
+<div class="row mx-3 py-5">
+    <h5>Inventory Details</h5>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Product Id</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Stock Available</th>
+                <th scope="col">Re-Order Point</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <th scope="row">1</th>
+                <td>1001</td>
+                <td>130</td>
+                <td>50</td>
+                <td>
+                    <button class="btn btn-primary" type="button">Edit</button>
+                    <button class="btn btn-danger mx-2" type="button" >Delete</button>
+                </td>
+            </tr> -->
+
+            <!-- <tr>
+                <th scope="row">2</th>
+                <td>1002</td>
+                <td>200</td>
+                <td>60</td>
+                <td>
+                    <button class="btn btn-primary" type="button">Edit</button>
+                    <button class="btn btn-danger mx-2" type="button" >Delete</button>
+                </td>
+            </tr> -->
+
+            <!-- <tr>
+                <th scope="row">3</th>
+                <td>1003</td>
+                <td>200</td>
+                <td>50</td>
+                <td>
+                    <button class="btn btn-primary" type="button">Edit</button>
+                    <button class="btn btn-danger mx-2" type="button" >Delete</button>
+                </td>
+            </tr>
+             -->
+
+
+
+            <tr *ngFor="let inventory of inventoryDetails">
+                <th scope="row">{{inventory.productId}}</th>
+                <td>{{inventory.productName}}</td>
+                <td>{{inventory.availableQty}}</td>
+                <td>{{inventory.reOrderPoint}}</td>
+                <td>
+                    <button class="btn btn-primary" type="button" (click)="populateFormForEdit(inventory)">Edit</button>
+                    <button class="btn btn-danger mx-2" type="button" (click)="openConfirmDialog(inventory.productId)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+ 
+   
+    </table>
+</div>
