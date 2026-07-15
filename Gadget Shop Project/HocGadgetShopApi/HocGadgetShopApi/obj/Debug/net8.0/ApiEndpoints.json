@@ -1,0 +1,139 @@
+[
+  {
+    "ContainingType": "HocGadgetShopApi.Controllers.CustomerController",
+    "Method": "DeleteCustomerData",
+    "RelativePath": "api/Customer/DeleteCustomerData",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HocGadgetShopApi.Controllers.CustomerController",
+    "Method": "GetCustomerData",
+    "RelativePath": "api/Customer/GetCustomerData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HocGadgetShopApi.Controllers.CustomerController",
+    "Method": "SaveCustomerData",
+    "RelativePath": "api/Customer/SaveCustomerData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "HocGadgetShopApi.Models.CustomerRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HocGadgetShopApi.Controllers.CustomerController",
+    "Method": "UpdateCustomerData",
+    "RelativePath": "api/Customer/UpdateInventoryData",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerRequest",
+        "Type": "HocGadgetShopApi.Models.CustomerRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HocGadgetShopApi.Controllers.InventoryController",
+    "Method": "SaveInventoryData",
+    "RelativePath": "api/Inventory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "HocGadgetShopApi.Models.InventoryRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HocGadgetShopApi.Controllers.InventoryController",
+    "Method": "DeleteInventoryData",
+    "RelativePath": "api/Inventory/DeleteInventoryData",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HocGadgetShopApi.Controllers.InventoryController",
+    "Method": "GetInventoryData",
+    "RelativePath": "api/Inventory/GetInventoryData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HocGadgetShopApi.Controllers.InventoryController",
+    "Method": "UpdateInventoryData",
+    "RelativePath": "api/Inventory/UpdateInventoryData",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "HocGadgetShopApi.Models.InventoryRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HocGadgetShopApi.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HocGadgetShopApi.WeatherForecast, HocGadgetShopApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
